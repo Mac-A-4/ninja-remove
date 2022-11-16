@@ -52,7 +52,7 @@ def remove_remote(data, user_selection):
 
 def main():
     data = load_config()
-    user_selection = get_user_selection()
+    user_selection = get_user_selection(data)
     remove_local(data, user_selection)
     remove_remote(data, user_selection)
     remove_config(data, user_selection)
