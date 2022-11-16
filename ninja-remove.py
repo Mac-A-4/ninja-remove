@@ -34,7 +34,7 @@ def remove_config(data, user_selection):
     del data['Workspaces'][user_selection]
 
 def execute_command(command):
-    if input('Can I execute "{command}" (y/n)? ') == 'y':
+    if input(f'Can I execute "{command}" (y/n)? ') == 'y':
         os.system(command)
 
 def remove_local(data, user_selection):
