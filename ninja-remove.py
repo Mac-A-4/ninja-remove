@@ -40,14 +40,14 @@ def execute_command(command):
 def remove_local(data, user_selection):
     print('Removing local workspace...')
     local_sync = data['Workspaces'][user_selection]['LocalSync']
-    execute_command(f'rm -rf {local_sync}')
+    execute_command(f'rm -rf {os.path.dirname(local_sync)}')
 
 def remove_remote(data, user_selection):
     print('Removing remote workspace...')
     workspace = data['Workspaces'][user_selection]
     remote_host = workspace['RemoteHost']
     remote_sync = workspace['RemoteSync']
-    remote_command = f'rm -rf {remote_sync}'
+    remote_command = f'rm -rf {os.path.dirname(remote_sync)}'
     execute_command(f'ssh {remote_host} "{remote_command}"')
 
 def main():
