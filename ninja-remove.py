@@ -1,7 +1,8 @@
 import json
 import os
+import os.path
 
-CONFIG_PATH = '~/.config/ninja-dev-sync.json'
+CONFIG_PATH = os.path.expanduser('~/.config/ninja-dev-sync.json')
 
 def load_config():
     print('Loading configuration...')
