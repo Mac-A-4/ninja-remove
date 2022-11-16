@@ -57,6 +57,7 @@ def main():
     remove_local(data, user_selection)
     remove_remote(data, user_selection)
     remove_config(data, user_selection)
+    save_config(data)
     print('Workspace removed.')
 
 if __name__ == '__main__':
